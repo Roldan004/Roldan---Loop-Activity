@@ -10,6 +10,11 @@
 </head>
     <h3>Loop Activity 06</h3>
 <body>
+    <p>A program which will count the "e"</p> 
+    <p>characters in the text "hivelabs technologies".</p>
+    <br>
+    <p>Answer</p>
+
 <?php  
 function count_letters($word,$hivelabstechnologies) {
 
@@ -25,8 +30,7 @@ function count_letters($word,$hivelabstechnologies) {
     echo "The number of ".$hivelabstechnologies." in ".$word." is: ".$count;
 }
 
-count_letters("hivelabstechnologies","e");
-
+count_letters("hivelabs technologies","e");
 ?> 
 
 </body>
