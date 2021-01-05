@@ -1,4 +1,6 @@
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,13 +10,18 @@
 </head>
     <h3>Loop Activity 02</h3>
 <body>
+    <p>a script using a for loop to add all</p> 
+    </p>integers between 0 and 30 and display the total.</p>
+    <br>
+    <p>Answer:</p>
+
 <?php  
 $sum=0;
-for ($x=1; $x<=30; $x++) 
+for ($deo=0; $deo<=30; $deo++) 
   {
-     $sum+=$x;
+     $sum+=$deo;
   }
-    echo "Adding the integer from 1 to 30 the total is $sum" . "\n";
+    echo "Adding the integer from 0 to 30 the total is $sum" . "\n";
 
 ?> 
 
