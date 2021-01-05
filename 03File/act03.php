@@ -10,14 +10,13 @@
 </head>
     <h3>Loop Activity 03</h3>
 <body>
+    <p>Construct a pattern using a nested loop (phase 01)</p>
 <?php  
 
 for ($roldan=1; $roldan<=5; $roldan++){
   for ($hinata=1; $hinata<=$roldan ;$hinata++)	{
     echo " ♔ ";}
     echo "<br>";}
-
-
 
 ?> 
 
