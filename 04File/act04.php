@@ -10,18 +10,19 @@
 </head>
     <h3>Loop Activity 04</h3>
 <body>
+    <p>Construct a pattern using a nested loop (phase 02)</p>
 <?php  
 
-for ($roldan=1; $roldan<=5; $roldan++){
-  for ($hinata=1; $hinata<=$roldan ;$hinata++)	{
+  for ($roldan=1; $roldan<=5; $roldan++){
+     for ($hinata=1; $hinata<=$roldan ;$hinata++)	{
     echo " ♔ ";}
     echo "<br>";}
 
-for ($dan=0; $dan<=5; $dan++){
-    for ($hina=5-$dan;$hina>=1;$hina--){
+  for ($dan=0; $dan<=5; $dan++){
+     for ($hina=5-$dan;$hina>=1;$hina--){
       echo " ♚ ";}
       echo "<br>";}
-
+      
 ?> 
 
 </body>
