@@ -6,51 +6,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roldan Activity 7</title>
+    <title>Roldan Activity </title>
 </head>
-    <h3>Loop Activity 07</h3>
+    <h3>My Activity 07</h3>
 <body>
-    <p>Encrypt & Decrypt</p>
+    <p><b>Encrypt & Decrypt >"hivelabs"<</b></p>
     <br>
     <p>Answer:</p>
-<?php  
-
-function encrypt($message, $encryption_key){
-  $key = hex2bin($encryption_key);
-  $nonceSize = openssl_cipher_iv_length('aes-256-ctr');
-  $nonce = openssl_random_pseudo_bytes($nonceSize);
-  $ciphertext = openssl_encrypt(
-    $message, 
-    'aes-256-ctr', 
-    $key,
-    OPENSSL_RAW_DATA,
-    $nonce
-  );
-  return base64_encode($nonce.$ciphertext);
-  }
-  function decrypt($message,$encryption_key){
-    $key = hex2bin($encryption_key);
-    $message = base64_decode($message);
-    $nonceSize = openssl_cipher_iv_length('aes-256-ctr');
-    $nonce = mb_substr($message, 0, $nonceSize, '8bit');
-    $ciphertext = mb_substr($message, $nonceSize, null, '8bit');
-    $plaintext= openssl_decrypt(
-      $ciphertext, 
-      'aes-256-ctr', 
-      $key,
-      OPENSSL_RAW_DATA,
-      $nonce
-    );
-    return $plaintext;
-  }
-  $original_string = "Hivelabs Technology";
-  $key = '1f4276388ad3214c873428dbef42243f' ; //some random hex characters
-  $encrypted = encrypt($original_string,$key);
-  echo '<h3>Original String : '.$original_string.'</h3>';
-  echo '<h3>After Encryption : '.$encrypted.'</h3>';
-  echo '<h3>After Decryption : '.decrypt($encrypted,$key).'</h3>';
-
-?> 
-
+    <?php  
+    //Initialize array//   
+    $input = "hivelabs";
+    $arr = array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2');
+       
+    print("The Encrypted Text of hivelabs is: <br><br>");  
+    //Loop through the input then array//
+    for ($i = 0; $i < strlen($input);$i++) {   
+        for($k = 0; $k < count($arr); $k++) {
+        	if($input[$i] == $arr[$k]) {
+                echo $arr[$k+5]; }   
+        }           
+    }   echo "<br>";
+      echo "<br>";
+     echo "<br>";
+    print("The Decrypted Text is: <br><br>");
+    for ($i = 0; $i < strlen($input);$i++) {   
+        for($k = 0; $k < count($arr); $k++) {
+        	if($input[$i] == $arr[$k]) {
+            	echo $arr[$k]; }
+        }      
+    }      
+    ?>
 </body>
 </html>
